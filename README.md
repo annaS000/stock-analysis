@@ -11,6 +11,10 @@ This section will display the newly refactored VBA code along with a comparison 
 
 ---
 
+### **Original VBA Code:** 
+##### [Skip to Refactored Code](#refactored-vba-code)
+##### [Skip to Comparison](#stock-performance-comparison)
+
     Sub yearValueAnalysis()
         Dim startTime As Single
         Dim endTime  As Single
@@ -81,7 +85,7 @@ This section will display the newly refactored VBA code along with a comparison 
 
                 End If
             Next j
-            
+
             '6) Output data for current ticker
             Worksheets("All Stocks Analysis").Activate
             Cells(4 + i, 1).Value = ticker
@@ -98,6 +102,8 @@ This section will display the newly refactored VBA code along with a comparison 
 
 
 ### **Refactored VBA Code:**
+##### [Back to Original Code](#original-vba-code)
+##### [Skip to Comparison](#stock-performance-comparison)
     Sub AllStocksAnalysisRefactored()
         Application.Calculation = xlCalculationManual
         Application.ScreenUpdating = False
@@ -221,11 +227,17 @@ This section will compare the stock performance between 2017 and 2018.
 ---
 #### **2017 Performance Chart**
 ![2017 chart](https://raw.githubusercontent.com/annaS000/stock-analysis/main/Resources/2017-chart-refactored.png)
+##### **A Closer look at 2017:**
+> Here we can see that the company Daqo did exceptionally well in 2017 with a whopping 199.4% return. All but one of other companies also did well this year. Why might this be? After a quick visit to Google, I found that 2017 faced many natural disasters. According to the National Oceanic and Atmospheric Administration, "During 2017, the U.S. experienced a historic year of weather and climate disasters.  In total, the U.S. was impacted by 16 separate billion-dollar disaster events including: three tropical cyclones, eight severe storms, two inland floods, a crop freeze, drought and wildfire." This amount of tragedy in a year may have been a wake up call to many people to invest in green energy in efforts to slow down climate change. 
+[Visit NOAA here for more information](https://www.climate.gov/news-features/blogs/beyond-data/2017-us-billion-dollar-weather-and-climate-disasters-historic-year) 
 
 #### **2018 Performance Chart**
 ![2018 chart](https://raw.githubusercontent.com/annaS000/stock-analysis/main/Resources/2018-chart-refactored.png)
+##### **A Closer look at 2018:**
+>
 
-
+## **Conclusion**
+Overall, I would say it is would be hard to make any predictions of how well
 ---
 ### **Execution times:**
 This section will go through the difference in run time for the original VBA code and the refactored code.
@@ -238,9 +250,6 @@ This section will go through the difference in run time for the original VBA cod
 #### **2017 Refactored Execution Time**
 ![2017 time refactored](https://raw.githubusercontent.com/annaS000/stock-analysis/main/Resources/VBA_Challenge_2017.png)
 
-#### **2017 Run Time Percent Decrease**
-![2017 decrease](https://raw.githubusercontent.com/annaS000/stock-analysis/main/Resources/2017%20percent%20decrease.png)
-
 #### **2018 Original Execution Time**
 ![2018 time original](https://raw.githubusercontent.com/annaS000/stock-analysis/main/Resources/2018-time-original.png)
 
@@ -248,7 +257,11 @@ This section will go through the difference in run time for the original VBA cod
 ![2018 time refactored](https://raw.githubusercontent.com/annaS000/stock-analysis/main/Resources/VBA_Challenge_2018.png)
 
 #### **2017 Run Time Percent Decrease**
+![2017 decrease](https://raw.githubusercontent.com/annaS000/stock-analysis/main/Resources/2017%20percent%20decrease.png)
+
+#### **2018 Run Time Percent Decrease:**
 ![2018 decrease](https://raw.githubusercontent.com/annaS000/stock-analysis/main/Resources/2018%20percent%20decrease.png)
+> After refactoring the VBA code, the 2017 and 2018 executions had an 81.1% and 83.3% decrease in time respectively. Pretty impressive!
 
 ## Summary
 
@@ -258,7 +271,7 @@ This section will summarize the pros and cons of refactoring code and how that a
 
 ---
 
-### The Advantages and Disadvantges of Refactoring Code
+### The Advantages and Disadvantages of Refactoring Code
 1. What are the advantages or disadvantages of refactoring code?
     #### **Advantages:**
     * Refactoring code allows the main structure of an existing code to remain useable. This means anyone who has used this code previously or may use again in the future will continue to be familiar with how it runs and the process it takes to collect information. This is beneficial because if an error occurs the user will be able to locate the issue quicker than if the code was completely redone from scratch.
