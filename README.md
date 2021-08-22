@@ -10,7 +10,7 @@
 This section will display the newly refactored VBA code along with a comparison of stock performance between 2017 and 2018 and their execution times.
 
 ---
-### The VB Script
+### **Refactored VBA Code:**
     Sub AllStocksAnalysisRefactored()
         Application.Calculation = xlCalculationManual
         Application.ScreenUpdating = False
@@ -127,14 +127,41 @@ This section will display the newly refactored VBA code along with a comparison 
         Application.ScreenUpdating = True
     End Sub
 
+---
+### **Stock Performance Comparison:**
+This section will compare the stock performance between 2017 and 2018.
 
-### Stock Performance Comparison
-* analysis
+---
+#### **2017 Performance Chart**
+![2017 chart](https://raw.githubusercontent.com/annaS000/stock-analysis/main/Resources/2017-chart-refactored.png)
+
+#### **2018 Performance Chart**
+![2018 chart](https://raw.githubusercontent.com/annaS000/stock-analysis/main/Resources/2018-chart-refactored.png)
 
 
-### Execution times
-* Images
+---
+### **Execution times:**
+This section will go through the difference in run time for the original VBA code and the refactored code.
 
+---
+
+#### **2017 Original Execution Time**
+![2017 time original](https://raw.githubusercontent.com/annaS000/stock-analysis/main/Resources/2017-time-original.png)
+
+#### **2017 Refactored Execution Time**
+![2017 time refactored](https://raw.githubusercontent.com/annaS000/stock-analysis/main/Resources/VBA_Challenge_2017.png)
+
+#### **2017 Run Time Percent Decrease**
+![2017 decrease](https://raw.githubusercontent.com/annaS000/stock-analysis/main/Resources/2017%20percent%20decrease.png)
+
+#### **2018 Original Execution Time**
+![2018 time original](https://raw.githubusercontent.com/annaS000/stock-analysis/main/Resources/2018-time-original.png)
+
+#### **2018 Refactored Execution Time**
+![2018 time refactored](https://raw.githubusercontent.com/annaS000/stock-analysis/main/Resources/VBA_Challenge_2018.png)
+
+#### **2017 Run Time Percent Decrease**
+![2018 decrease](https://raw.githubusercontent.com/annaS000/stock-analysis/main/Resources/2018%20percent%20decrease.png)
 
 ## Summary
 
