@@ -85,7 +85,7 @@ Sub AllStocksAnalysisRefactored()
             
         End If
             
-   Next i
+    Next i
     
     '4) Loop through your arrays to output the Ticker, Total Daily Volume, and Return.
     Worksheets("All Stocks Analysis").Activate
