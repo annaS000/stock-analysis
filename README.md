@@ -220,7 +220,7 @@ This section will summarize the pros and cons of refactoring code and how that a
     * Since we have practiced refactoring code on a small scale, there wasn't much of a risk to refactoring the code. If we were given even greater sheets to work with, there is a stronger chance of causing issues with the code that may not have been an issue otherwise. 
     * Additionally, the refactoring of this code did not take long since there was only a short length to be changed. For this project, we made a couple changes such as:
         * Creating a `tickerIndex` to be incremented in the loop 
-        * Storing data in arrays (`Dim tickerVolumes(12) As Long, tickerStartingPrices(12), tickerEndingPrices(12) As Single`) that use data types that limit the number of bytes being to reduce the amount of data processed at a time 
+        * Declaring arrays `Dim tickerVolumes(12) As Long, tickerStartingPrices(12), tickerEndingPrices(12) As Single` that use data types that limit the number of bytes being to reduce the amount of data processed at a time. 
         * Eliminating the need for a `Nested For Loop`. 
         * Simplifying conditional statements like
 
