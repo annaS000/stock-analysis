@@ -2,7 +2,7 @@
 ## **Overview**
 ### **Purpose**
 
->Our friend Steve has recently graduated with a degree in finance. His parents are showing their support by being his first clients. They are interested in investing in companies for green energy. Without doing much research, Steve's parents have decided to invest all of their money into **Daqo New Energy Corporation**, a company that makes silicon wafers for solar panels. In turn, Steve asked us to prepare a workbook of stock data so he could analyze the **Daily Volume** and **Yearly Return** of Daqo and compare these results with data from other companies to help his parents.
+>Our friend Steve has recently graduated with a degree in finance. His parents are showing their support by being his first clients. They are interested in investing in companies for green energy. Without doing much research, Steve's parents have decided to invest all of their money into **Daqo New Energy Corporation**, a company that makes silicon wafers for solar panels. In turn, Steve asked us to prepare a workbook of [stock data](https://github.com/annaS000/stock-analysis/blob/main/VBA_Challenge.xlsm) so he could analyze the **Daily Volume** and **Yearly Return** of Daqo and compare these results with data from other companies to help his parents.
 >>Utilizing VBA code, we were able to quickly pull this data for Steve from the spreadsheets we were provided and format the results neatly with a simple button. Steve was pleased with the work we provided to him but, now is looking to expand his dataset to the whole stock market over the past few years for some extensive research. To avoid long execution times, we now must refactor our code to collect the same information and run faster.
 
 
@@ -259,11 +259,9 @@ Some tips that I found to be helpful include:
 * **Minimize traffic between VBA and the worksheet**: Avoid reading or writing worksheet data within loops. This takes too much time to process and is much one efficient to do once outside of the loop.
 
 #### **2017 Original vs. Refactored Execution Time**
-
-<img src="https://raw.githubusercontent.com/annaS000/stock-analysis/main/Resources/2017-time-original.png" width="200" height="200" hspace="25"> 
-
-
-<img src="https://raw.githubusercontent.com/annaS000/stock-analysis/main/Resources/VBA_Challenge_2017.png" width="200" height="200" hspace = "25">
+Before | After
+- | - 
+<img src="https://raw.githubusercontent.com/annaS000/stock-analysis/main/Resources/2017-time-original.png" width="200" height="200" > | <img src="https://raw.githubusercontent.com/annaS000/stock-analysis/main/Resources/VBA_Challenge_2017.png" width="200" height="200" >
 
 
 > Here are the 2017 analysis execution times before and after refactoring the code.
@@ -271,11 +269,9 @@ Some tips that I found to be helpful include:
 <br />
 
 #### **2018 Original vs. Refactored Execution Time**
-
-<img src="https://raw.githubusercontent.com/annaS000/stock-analysis/main/Resources/2018-time-original.png" width="200" height="200" hspace="25"> 
-
-
-<img src="https://raw.githubusercontent.com/annaS000/stock-analysis/main/Resources/VBA_Challenge_2018.png" width="200" height="200" hspace="25">
+Before | After
+- | - 
+<img src="https://raw.githubusercontent.com/annaS000/stock-analysis/main/Resources/2018-time-original.png" width="200" height="200" > | <img src="https://raw.githubusercontent.com/annaS000/stock-analysis/main/Resources/VBA_Challenge_2018.png" width="200" height="200" >
 
 > Here are the 2018 analysis execution times before and after refactoring the code.
 
@@ -320,4 +316,4 @@ This section will summarize the pros and cons of refactoring code and how that a
 <br />
 
 ## **References**
-[Click here to view my References]()
+[Click here to view my References](https://github.com/annaS000/stock-analysis/blob/main/Stock_References.pdf)
