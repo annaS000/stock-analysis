@@ -259,21 +259,19 @@ Some tips that I found to be helpful include:
 * **Minimize traffic between VBA and the worksheet**: Avoid reading or writing worksheet data within loops. This takes too much time to process and is much one efficient to do once outside of the loop.
 
 #### **2017 Original vs. Refactored Execution Time**
-Before | After
-- | - 
-<img src="https://raw.githubusercontent.com/annaS000/stock-analysis/main/Resources/2017-time-original.png" width="200" height="200" > | <img src="https://raw.githubusercontent.com/annaS000/stock-analysis/main/Resources/VBA_Challenge_2017.png" width="200" height="200" >
+
+<img src="https://raw.githubusercontent.com/annaS000/stock-analysis/main/Resources/2017-time-original.png" width="200" height="200" >  <img src="https://raw.githubusercontent.com/annaS000/stock-analysis/main/Resources/VBA_Challenge_2017.png" width="200" height="200" >
 
 
-> Here are the 2017 analysis execution times before and after refactoring the code.
+> Here are the 2017 analysis execution times before (left) and after (right) refactoring the code.
 
 <br />
 
 #### **2018 Original vs. Refactored Execution Time**
-Before | After
-- | - 
-<img src="https://raw.githubusercontent.com/annaS000/stock-analysis/main/Resources/2018-time-original.png" width="200" height="200" > | <img src="https://raw.githubusercontent.com/annaS000/stock-analysis/main/Resources/VBA_Challenge_2018.png" width="200" height="200" >
 
-> Here are the 2018 analysis execution times before and after refactoring the code.
+<img src="https://raw.githubusercontent.com/annaS000/stock-analysis/main/Resources/2018-time-original.png" width="200" height="200" >  <img src="https://raw.githubusercontent.com/annaS000/stock-analysis/main/Resources/VBA_Challenge_2018.png" width="200" height="200" >
+
+> Here are the 2018 analysis execution times before (left) and after (right) refactoring the code.
 
 <br />
 
