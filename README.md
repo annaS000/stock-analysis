@@ -139,7 +139,7 @@ This section will compare the stock performance between 2017 and 2018.
 #### **2017 Performance Chart**
 ![2017 chart](https://raw.githubusercontent.com/annaS000/stock-analysis/main/Resources/2017-chart-refactored.png)
 ##### **A Closer look at 2017:**
-> Here we can see that the company Daqo did exceptionally well in 2017 with a whopping 199.4% return. All but one of other companies also did well this year. Why might this be? After a quick visit to Google, I found that 2017 faced many natural disasters. According to the National Oceanic and Atmospheric Administration, "During 2017, the U.S. experienced a historic year of weather and climate disasters.  In total, the U.S. was impacted by 16 separate billion-dollar disaster events including: three tropical cyclones, eight severe storms, two inland floods, a crop freeze, drought and wildfire." This amount of tragedy in a year may have been a wake up call to many people to invest in green energy in efforts to slow down climate change. 
+> Here we can see that the company Daqo did exceptionally well in 2017 with a whopping 199.4% return. All but one of the other companies also did well this year. Why might this be? After a quick visit to Google, I found that 2017 faced many natural disasters. According to the National Oceanic and Atmospheric Administration, "During 2017, the U.S. experienced a historic year of weather and climate disasters.  In total, the U.S. was impacted by 16 separate billion-dollar disaster events including: three tropical cyclones, eight severe storms, two inland floods, a crop freeze, drought and wildfire." This amount of tragedy in a year may have been a wake up call to many people to invest in green energy in efforts to slow down climate change. 
 [Visit NOAA here for more information](https://www.climate.gov/news-features/blogs/beyond-data/2017-us-billion-dollar-weather-and-climate-disasters-historic-year) 
 
 #### **2018 Performance Chart**
@@ -217,8 +217,8 @@ This section will summarize the pros and cons of refactoring code and how that a
 
 2. How do these pros and cons apply to refactoring the original VBA script?
 
-    * Since we have practiced refactoring code on a small scale, there wasn't much of a risk to refactoring the code. If we were given even greater sheets to work with, there is a stronger chance of causing issues with the code that may not have been an issue otherwise. 
-    * Additionally, the refactoring of this code did not take long since there was only a short length to be changed. For this project, we made a couple changes such as:
+    * Since we have practiced refactoring code on a small scale, there wasn't much of a risk to refactoring the code. If we were given an even greater amount of sheets to work with, there is a stronger chance of causing issues with the code that may not have been an issue otherwise. 
+    * The refactoring of this code did not take long since there was only a short length to be changed. For this project, we made a couple changes such as:
         * Creating a `tickerIndex` to be incremented in the loop 
         * Declaring arrays `Dim tickerVolumes(12) As Long, tickerStartingPrices(12), tickerEndingPrices(12) As Single` that use data types that limit the number of bytes being to reduce the amount of data processed at a time. 
         * Eliminating the need for a `Nested For Loop`. 
@@ -229,7 +229,7 @@ This section will summarize the pros and cons of refactoring code and how that a
             to 
                 
             `If Cells(i - 1, 1).Value <> tickers(tickerIndex) Then`
-        
+     * Lastly, if there was a more efficient way to get the results for this project, we were limited to what we were able to change about it. Thus, not leaving much room to brainstorm on how this code could be better based on functionality.
     
 
 
