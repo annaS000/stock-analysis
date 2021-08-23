@@ -12,98 +12,8 @@ This section will display the newly refactored VBA code along with a comparison 
 
 ---
 
-### **Original VBA Code:** 
-###### [Skip to Refactored Code](#refactored-vba-code)
-###### [Skip to Comparison](#stock-performance-comparison)
-
-    Sub yearValueAnalysis()
-        Dim startTime As Single
-        Dim endTime  As Single
-        Dim yearValue As String
-
-        yearValue = InputBox("What year would you like to run the analysis on?")
-
-            startTime = Timer
-
-        '1) Format the output sheet on All Stocks Analysis worksheet
-        Worksheets("All Stocks Analysis").Activate
-        Cells(1, 1).Value = "All Stocks (" + yearValue + ")"
-        'Create a header row
-        Cells(3, 1).Value = "Ticker"
-        Cells(3, 2).Value = "Total Daily Volume"
-        Cells(3, 3).Value = "Return"
-
-        '2) Initialize array of all tickers
-        Dim tickers(12) As String
-        tickers(0) = "AY"
-        tickers(1) = "CSIQ"
-        tickers(2) = "DQ"
-        tickers(3) = "ENPH"
-        tickers(4) = "FSLR"
-        tickers(5) = "HASI"
-        tickers(6) = "JKS"
-        tickers(7) = "RUN"
-        tickers(8) = "SEDG"
-        tickers(9) = "SPWR"
-        tickers(10) = "TERP"
-        tickers(11) = "VSLR"
-
-        '3a) Initialize variables for starting price and ending price
-        Dim startingPrice As Single
-        Dim endingPrice As Single
-
-        '3b) Activate data worksheet
-        Worksheets(yearValue).Activate
-
-        '3c) Get the number of rows to loop over
-        RowCount = Cells(Rows.Count, "A").End(xlUp).Row
-
-        '4) Loop through tickers
-        For i = 0 To 11
-            ticker = tickers(i)
-            totalVolume = 0
-
-            '5) loop through rows in the data
-            Worksheets(yearValue).Activate
-            For j = 2 To RowCount
-
-                '5a) Get total volume for current ticker
-                If Cells(j, 1).Value = ticker Then
-
-                    totalVolume = totalVolume + Cells(j, 8).Value
-
-                End If
-                '5b) get starting price for current ticker
-                If Cells(j - 1, 1).Value <> ticker And Cells(j, 1).Value = ticker Then
-                    startingPrice = Cells(j, 6).Value
-
-                End If
-
-                '5c) get ending price for current ticker
-                If Cells(j + 1, 1).Value <> ticker And Cells(j, 1).Value = ticker Then
-
-                    endingPrice = Cells(j, 6).Value
-
-                End If
-            Next j
-
-            '6) Output data for current ticker
-            Worksheets("All Stocks Analysis").Activate
-            Cells(4 + i, 1).Value = ticker
-            Cells(4 + i, 2).Value = totalVolume
-            Cells(4 + i, 3).Value = endingPrice / startingPrice - 1
-
-        Next i
-        
-        endTime = Timer
-            MsgBox "This code ran in " & (endTime - startTime) & " seconds for the year " & (yearValue)
-
-        End Sub
-
-
-
-### **Refactored VBA Code:**
-###### [Back to Original Code](#original-vba-code)
+### **Refactored VBA Code**
+###### [Original Code Can Viewed Here](https://github.com/annaS000/stock-analysis/blob/main/from%20lessons/anyYear.txt)
 ###### [Skip to Comparison](#stock-performance-comparison)
     Sub AllStocksAnalysisRefactored()
         Application.Calculation = xlCalculationManual
@@ -222,7 +132,7 @@ This section will display the newly refactored VBA code along with a comparison 
     End Sub
 
 ---
-### **Stock Performance Comparison:**
+### **Stock Performance Comparison**
 This section will compare the stock performance between 2017 and 2018.
 
 ---
@@ -237,19 +147,20 @@ This section will compare the stock performance between 2017 and 2018.
 ##### **A Closer look at 2018:**
 > Looking at this chart, we can see that there is a big change from the prior year. It seems that the two companies Enphase Energy and Sunrun rose to the top in 2018. After the boom of investment in green energy, perhaps these two companies became more favorable than the other companies. I decided to do a little more digging on why this may have happened. According to the Solar Energy Industries Association, in January 2018, the Trump administration placed tariffs on imported solar cells and modules until 2022. These tariffs have limited the market for Chinese companies, such as Daqo, in the US.  The SEIA reported, "As a result, the U.S. will continue to import 80%-90% of our solar cells and modules at a higher cost due to the tariff, potentially putting solar out of reach for many homeowners." This change can explain the drop in return in 2018. [Visit SEIA here for more information](https://www.seia.org/research-resources/solar-market-insight-report-2018-year-review)
 
-## **Conclusion**
+### **Conclusion**
 
 ---
 If I were to only to look at the stock data from 2017 and 2018, I would may already be under the impression Daqo may not be a great company to invest in because of the drop in return. Since Daqo was not the only company to experience this loss and the two charts were so drastically different, I considered something may have happened in 2018 that negatively impacted the market for solar energy. Overall, I would say it would be more beneficial to analyze the stocks of these companies over a wider range of time rather than only comparing the performance of only two years. While 2017 and 2018 were important years from what I found in my research, having more years to look at or possibly looking at data on a day to day scale could be more helpful in finding trends or patterns. Additionally, now knowing these tariffs are expected to expire within the next year these outcomes may be subject to change.
 
 ---
-### **Execution times:**
+### **Execution times**
 This section will go through the difference in run time for the original VBA code and the refactored code.
 
 ---
 
 #### **Refactoring the Code**
-When I began refactoring my code, I wanted to know if there were any way to speed up my code that I may not have considered. I was able to find some tips in *Excel VBA Programming For Dummies* by Michael Alexander and John Walkenbach and in an article from the Society of Actuaries website.
+When I began refactoring my code, I wanted to know if there were any other ways to speed up my code that may not have been listed. I was able to find some tips in *Excel VBA Programming For Dummies* by Michael Alexander and John Walkenbach and in the article, *Excel VBA Speed And Efficiency*,
+by Kevin Roper from the Society of Actuaries website.
 
 #### **VBA Speed Tips:**
 Some tips that I found to be helpful include:
@@ -306,12 +217,23 @@ This section will summarize the pros and cons of refactoring code and how that a
 
 2. How do these pros and cons apply to refactoring the original VBA script?
 
-    * Since we have practiced refactoring code on a small scale, there wasn't much of a risk to refactoring the code. If we were given even greater sheets to work with, there is a stronger chance of causing issues with the code that may not have been an issue otherwise. Additionally, 
-    * Upon reviewing the sheets provided for this challenge, you may notice the ticker columns of both the 2017 and 2018 sheet are both neatly organized in which all tickers of the same kind are put into sections with each other and put in order by date. What if we had received sheets that were not so nicely put together? Our script heavily relies on this sheet organization. The way the program decides where the ending price for each ticker is and when to move on to increment the ticker index is when the current ticker does not match the following cell in the column. If the tickers were not grouped together and in chronological order the code would break down quickly
-    * statement 3
-    * statement 4
+    * Since we have practiced refactoring code on a small scale, there wasn't much of a risk to refactoring the code. If we were given even greater sheets to work with, there is a stronger chance of causing issues with the code that may not have been an issue otherwise. 
+    * Additionally, the refactoring of this code did not take long since there was only a short length to be changed. For this project, we made a couple changes such as:
+        * Creating a `tickerIndex` to be incremented in the loop 
+        * Storing data in arrays (`Dim tickerVolumes(12) As Long, tickerStartingPrices(12), tickerEndingPrices(12) As Single`) that use data types that limit the number of bytes being to reduce the amount of data processed at a time 
+        * Eliminating the need for a `Nested For Loop`. 
+        * Simplifying conditional statements like
+
+            `If Cells(j - 1, 1).Value <> ticker And Cells(j, 1).Value = ticker Then` 
+
+            to 
+                
+            `If Cells(i - 1, 1).Value <> tickers(tickerIndex) Then`
+        
+    
+
 
 <br />
 
 ## **References**
-[Click here to view my References](https://github.com/annaS000/stock-analysis/blob/main/Stock_References.pdf)
+[Click Here to View my References](https://github.com/annaS000/stock-analysis/blob/main/Stock_References.pdf)
